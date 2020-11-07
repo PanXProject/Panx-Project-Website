@@ -5,18 +5,27 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Tailwind`,
-    description: `Gatsby starter styled with Tailwind`,
-    author: `@taylorbryant`,
+    title: `Panx Project`,
+    description: `Panx XaaS Digital Solutions Consultants`,
+    author: `@panxproject`,
   },
   plugins: [
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: "images",
+      },
+    },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-tailwind`,
-        short_name: `starter`,
+        name: `gatsby-tailwind-panx`,
+        short_name: `panx`,
         start_url: `/`,
         background_color: fullConfig.theme.colors.white,
         theme_color: fullConfig.theme.colors.teal["400"],
@@ -36,6 +45,11 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`, `/about/`, `/start/`, `/signup/`, `/services/`],
+      }
+    }
   ],
 };
