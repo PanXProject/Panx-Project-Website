@@ -1,4 +1,4 @@
-# Gatsby Starter Tailwind
+# Panx Project A Tailwindcss + Gatsby Site
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors)
 
@@ -38,7 +38,7 @@ npm i --global gatsby-cli
 Create a new Gatsby project using this starter:
 
 ```sh
-gatsby new my-new-website https://github.com/taylorbryant/gatsby-starter-tailwind
+gatsby new my-new-website https://github.com/panxproject/panx-project-website
 ```
 
 Build a stylesheet from your Tailwind CSS config and run the project in development mode:
